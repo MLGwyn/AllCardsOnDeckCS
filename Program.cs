@@ -12,11 +12,15 @@ namespace AllCardsOnDeckCS
 
             var deckOfCards = new List<string>();
 
-            foreach (var currentSuit in suits)
+            for (var deckOfCardsCount = 0; deckOfCardsCount < 2; deckOfCardsCount++)
             {
-                foreach (var currentRank in ranks)
+
+                foreach (var currentSuit in suits)
                 {
-                    deckOfCards.Add($"{currentRank} of {currentSuit}");
+                    foreach (var currentRank in ranks)
+                    {
+                        deckOfCards.Add($"{currentRank} of {currentSuit}");
+                    }
                 }
             }
 
@@ -33,6 +37,8 @@ namespace AllCardsOnDeckCS
             }
 
             Console.WriteLine($"The top two cards are {deckOfCards[0]} and {deckOfCards[1]} ");
+            Console.WriteLine($"There are {deckOfCards.Count} cards in the deck.");
+
 
 
 
